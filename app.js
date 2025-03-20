@@ -14,11 +14,11 @@ dotenv.config({
 
 const app = express();
 
-
 app.use(cors({
-  origin:process.env.CORS_ORIGIN || '*',
-  credentials:true
-}))
+  origin: 'https://learn-easy-r6l1.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 // Middleware
